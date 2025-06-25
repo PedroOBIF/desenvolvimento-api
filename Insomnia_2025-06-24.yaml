@@ -1,0 +1,199 @@
+type: collection.insomnia.rest/5.0
+name: Projeto LTP
+meta:
+  id: wrk_3b6176c021f8485f8905066e6c540fe0
+  created: 1750731982011
+  modified: 1750731982011
+  description: ""
+collection:
+  - name: Realizar Login
+    meta:
+      id: fld_48df374f55dd413d9fb63c5fc600d8c0
+      created: 1750732098120
+      modified: 1750732447008
+      sortKey: -1750732158071
+      description: ""
+    children:
+      - url: http://localhost:5000/api/usuarios
+        name: POST Usuario
+        meta:
+          id: req_23bd30c232524046ae99fd86dec3bafc
+          created: 1750731982020
+          modified: 1750732145088
+          isPrivate: false
+          description: ""
+          sortKey: -1750732141451
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Exemplo",
+              "email": "exemplo@teste.com",
+              "senha": "123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5000/api/usuarios/1
+        name: GET Usuario por ID
+        meta:
+          id: req_e31b102e9d00495ba81c540cddc1c385
+          created: 1750731982023
+          modified: 1750734041804
+          isPrivate: false
+          description: ""
+          sortKey: -1750732141351
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Menu
+    meta:
+      id: fld_c03baf9980c94218bc19ed29319e41ed
+      created: 1750732125638
+      modified: 1750732696747
+      sortKey: -1750732158021
+      description: ""
+  - name: Iniciar Jogo
+    meta:
+      id: fld_71458886668e41ffb792d9f0cf43d536
+      created: 1750732157971
+      modified: 1750732423127
+      sortKey: -1750732157971
+      description: ""
+  - url: http://localhost:5000/api/menu
+    name: Menu
+    meta:
+      id: req_73831bf8b3e346b1aeb894fedd132ce5
+      created: 1750731982025
+      modified: 1750734104294
+      isPrivate: false
+      description: ""
+      sortKey: -1750732157996
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/save
+    name: Cria Save
+    meta:
+      id: req_3677a28f20174d248b5fe4abf6ad1d2f
+      created: 1750731982028
+      modified: 1750732517212
+      isPrivate: false
+      description: ""
+      sortKey: -1750732141804.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": "1",
+          "location_id": "123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/save/1
+    name: Pega um Save
+    meta:
+      id: req_e13b293af1264f49b82d1322c7602f78
+      created: 1750731982030
+      modified: 1750734116872
+      isPrivate: false
+      description: ""
+      sortKey: -1750732156960.5938
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/save/1
+    name: Atualizar Save
+    meta:
+      id: req_089b5a96939e449c9a11047b1146fe21
+      created: 1750731982031
+      modified: 1750732411179
+      isPrivate: false
+      description: ""
+      sortKey: -1750732153929.375
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "location_id": "999"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/save/1
+    name: Apagar Save
+    meta:
+      id: req_4d589a1cc0f64d54b5d8a2993f997f8a
+      created: 1750731982033
+      modified: 1750732407105
+      isPrivate: false
+      description: ""
+      sortKey: -1750732155950.1875
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_cf669cfad42d09c273f32d5c773fc1e73776fc88
+    created: 1750731984129
+    modified: 1750731984129
+environments:
+  name: Base Environment
+  meta:
+    id: env_cf669cfad42d09c273f32d5c773fc1e73776fc88
+    created: 1750731984113
+    modified: 1750731984113
+    isPrivate: false
